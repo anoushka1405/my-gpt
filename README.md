@@ -1,10 +1,31 @@
-# My GPT — Built from Scratch
+# My GPT : A Transformer Language Model Built from Scratch
 
-> Assembled from the NeetCode ML course on [NeetCode.io](https://neetcode.io)
-> Built by **Anoushka Gupta** on June 11, 2026
+A full implementation of a GPT-style language model built from first principles, including neural network primitives, attention mechanisms, tokenizer, training pipeline, and text generation.
 
-Every file in this project is code I wrote and submitted while completing the NeetCode ML course.
-The problems progressively build from gradient descent fundamentals all the way to a working GPT.
+## Overview
+
+This project is a ground-up reconstruction of a GPT-style transformer model, built to deeply understand how modern large language models work internally.
+
+Instead of using high-level abstractions, every major component is implemented manually — from gradient descent and backpropagation to self-attention and text generation.
+
+The system follows a full progression:
+
+**Math Foundations → Neural Networks → NLP Pipeline → Transformer Architecture → GPT Model**
+
+## Key Features
+
+- Neural network primitives implemented from scratch (forward + backprop)
+- Gradient descent training system
+- Activation functions (ReLU, Sigmoid, Softmax)
+- Byte-Pair Encoding (BPE) tokenizer
+- Full dataset + batching pipeline
+- Self-attention and multi-head attention
+- Transformer block implementation
+- GPT-style autoregressive language model
+- KV-cache for faster inference
+- Grouped Query Attention (GQA)
+- Text generation with sampling
+
 
 ## Project Structure
 
@@ -46,12 +67,16 @@ python train.py
 python generate.py
 ```
 
-## Course
+## Limitations
+- Not trained on large-scale datasets
+- Not optimized for production use
+- No distributed training support
+- Simplified compared to industrial LLM systems
 
-This project was built by completing the [NeetCode ML Course](https://neetcode.io/practice?tab=coreSkills&topic=Machine+Learning):
-- Math Foundations (gradient descent, activations, loss functions)
-- Neural Networks from scratch (neuron, backprop, MLP)
-- PyTorch fundamentals
-- NLP pipeline (embeddings, tokenization, attention)
-- Transformer architecture
-- GPT model + text generation
+  
+## Future Work
+- Flash attention optimization
+- GPU acceleration improvements
+- Larger dataset training
+- Web-based demo interface
+- RLHF-style fine-tuning
