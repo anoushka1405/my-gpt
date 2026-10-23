@@ -4,7 +4,6 @@ class Solution:
 
         for _ in range(iterations):
             derivative = 2*minimizer
-            minimizer = minimizer - learning_rate * derivative
-
-
+            minimizer = minimizer-learning_rate*derivative
+        
         return round(minimizer,5)
